@@ -4,11 +4,12 @@ const methodOverride = require('method-override');
 const path = require('path');
 const dotenv = require('dotenv');
 const Album = require('./models/album'); // Adjust the path to your Album model
+// const bootstrap = require('bootstrap')
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3004;
 
 // Middleware setup
 app.set('view engine', 'ejs'); // Set the view engine to EJS
@@ -140,6 +141,6 @@ app.delete('/albums/:id', async (req, res) => {
 });
 
 // Start server
-app.listen(3003, () => {
-  console.log(`Server is running on http://localhost:${3003}`);
+app.listen(3004, () => {
+  console.log(`Server is running on http://localhost:${3004}`);
 });
