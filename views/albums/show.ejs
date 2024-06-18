@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= album.albumName %></title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <h1><%= album.albumName %> by <%= album.artist %></h1>
+    <img src="<%= album.albumImageUrl %>" alt="<%= album.albumName %>">
+    <h2>Genre: <%= album.genre %></h2>
+    <h2>Year: <%= album.year %></h2>
+    <img src="<%= album.artistImageUrl %>" alt="<%= album.artist %>">
+
+    <a href="/albums/<%= album._id %>/edit">Edit Album</a><br>
+    <a href="/albums">Back to Albums</a>
+
+    <form id="deleteForm" action="/albums/<%= album._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

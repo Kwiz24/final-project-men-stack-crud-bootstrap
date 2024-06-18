@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="/path/to/your/styles.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <h1>Albums</h1>
+    <!-- Add a link to navigate back to the album page -->
+    <a href="/albums">Return to Albums</a>
+    <ul>
+        <% albums.forEach((album) => { %>
+            <li>
+                <h2><%= album.albumName %> by <%= album.artist %></h2>
+                <p>Genre: <%= album.genre %></p>
+                <p>Year: <%= album.year %></p>
+                <img src="<%= album.albumImageUrl %>" alt="<%= album.albumName %> cover">
+                <img src="<%= album.artistImageUrl %>" alt="<%= album.artist %> image">
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
