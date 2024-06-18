@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Albums</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <h1>Albums</h1>
+
+  <form action="/albums/search" method="get">
+    <input type="text" name="q" placeholder="Search albums, artists, genres">
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (albums.length > 0) { %>
+    <ul>
+      <% albums.forEach(album => { %>
+        <li>
+          <h2><%= album.albumName %></h2>
+          <p>Artist: <%= album.artist %></p>
+          <p>Genre: <%= album.genre %></p>
+          <p>Year: <%= album.year %></p>
+          <img src="<%= album.albumImageUrl %>" alt="<%= album.albumName %> cover" width="100">
+          <img src="<%= album.artistImageUrl %>" alt="<%= album.artist %> picture" width="100">
+          <a href="/albums/<%= album._id %>">View Details</a>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No albums found.</p>
+  <% } %>
+</body>
+</html>

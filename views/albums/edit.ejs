@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit <%= album.albumName %></title>
-    <link rel="stylesheet" href="/css/app.css">
+    <title>Edit Album</title>
+    <link rel="stylesheet" href="/css/app.css"> <!-- Include your CSS file -->
 </head>
 <body>
-    <h1>Edit <%= album.albumName %> by <%= album.artist %></h1>
+    <h1>Edit Album</h1>
     <form action="/albums/<%= album._id %>?_method=PUT" method="POST">
-        <label for="artist">Artist:</label>
-        <input type="text" name="artist" id="artist" value="<%= album.artist %>" required />
-
         <label for="albumName">Album Name:</label>
-        <input type="text" name="albumName" id="albumName" value="<%= album.albumName %>" required />
-
+        <input type="text" name="album[albumName]" id="albumName" value="<%= album.albumName %>" required>
+        
+        <label for="artist">Artist:</label>
+        <input type="text" name="album[artist]" id="artist" value="<%= album.artist %>" required>
+        
         <label for="genre">Genre:</label>
-        <input type="text" name="genre" id="genre" value="<%= album.genre %>" required />
-
+        <input type="text" name="album[genre]" id="genre" value="<%= album.genre %>" required>
+        
         <label for="year">Year:</label>
-        <input type="number" name="year" id="year" value="<%= album.year %>" required />
-
-        <label for="artistImageUrl">Artist Image URL:</label>
-        <input type="text" name="artistImageUrl" id="artistImageUrl" value="<%= album.artistImageUrl %>" />
-
+        <input type="number" name="album[year]" id="year" value="<%= album.year %>" required>
+        
         <label for="albumImageUrl">Album Image URL:</label>
-        <input type="text" name="albumImageUrl" id="albumImageUrl" value="<%= album.albumImageUrl %>" />
-
+        <input type="url" name="album[albumImageUrl]" id="albumImageUrl" value="<%= album.albumImageUrl %>" required>
+        
+        <label for="artistImageUrl">Artist Image URL:</label>
+        <input type="url" name="album[artistImageUrl]" id="artistImageUrl" value="<%= album.artistImageUrl %>" required>
+        
         <button type="submit">Update Album</button>
     </form>
     <a href="/albums">Back to Albums</a>

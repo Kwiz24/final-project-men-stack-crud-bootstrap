@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add New Album</title>
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/app.css"> <!-- Ensure this path is correct -->
 </head>
 <body>
-  <h1>Add a New Album</h1>
-  <form action="/albums" method="POST">
-    <label for="artist">Artist:</label>
-    <input type="text" name="artist" id="artist" required />
-
+  <h1>Add New Album</h1>
+  <form action="/albums" method="post">
     <label for="albumName">Album Name:</label>
-    <input type="text" name="albumName" id="albumName" required />
-
+    <input type="text" id="albumName" name="album[albumName]" required>
+    <br>
+    <label for="artist">Artist:</label>
+    <input type="text" id="artist" name="album[artist]" required>
+    <br>
     <label for="genre">Genre:</label>
-    <input type="text" name="genre" id="genre" required />
-
+    <input type="text" id="genre" name="album[genre]" required>
+    <br>
     <label for="year">Year:</label>
-    <input type="number" name="year" id="year" required />
-
-    <label for="artistImageUrl">Artist Image URL:</label>
-    <input type="text" name="artistImageUrl" id="artistImageUrl" />
-
+    <input type="number" id="year" name="album[year]" required>
+    <br>
     <label for="albumImageUrl">Album Image URL:</label>
-    <input type="text" name="albumImageUrl" id="albumImageUrl" />
-
+    <input type="url" id="albumImageUrl" name="album[albumImageUrl]" required>
+    <br>
+    <label for="artistImageUrl">Artist Image URL:</label>
+    <input type="url" id="artistImageUrl" name="album[artistImageUrl]" required>
+    <br>
     <button type="submit">Add Album</button>
   </form>
   <a href="/albums">Back to Albums</a>
