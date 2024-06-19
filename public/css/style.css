@@ -1,0 +1,33 @@
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text color */
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffcc00; /* Complementary color for headings */
+}
+
+a {
+    color: #ff6600; /* Stylish link color */
+}
+
+a:hover {
+    color: #ffcc00; /* Hover color for links */
+}
+
+.form-container {
+    background-color: #2e2e2e; /* Dark form background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-custom {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+.btn-custom:hover {
+    background-color: #ffcc00;
+    color: #000000;
+}

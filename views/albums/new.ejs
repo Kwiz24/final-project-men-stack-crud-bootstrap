@@ -2,42 +2,43 @@
 <html>
 <head>
   <title>Add New Album</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div class="container mt-5">
-    <h1>Add New Album</h1>
-    <form action="/albums" method="post">
-      <div class="mb-3">
-        <label for="albumName" class="form-label">Album Name:</label>
-        <input type="text" id="albumName" name="album[albumName]" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="artist" class="form-label">Artist:</label>
-        <input type="text" id="artist" name="album[artist]" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="genre" class="form-label">Genre:</label>
-        <input type="text" id="genre" name="album[genre]" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="year" class="form-label">Year:</label>
-        <input type="number" id="year" name="album[year]" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="albumImageUrl" class="form-label">Album Image URL:</label>
-        <input type="url" id="albumImageUrl" name="album[albumImageUrl]" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="artistImageUrl" class="form-label">Artist Image URL:</label>
-        <input type="url" id="artistImageUrl" name="album[artistImageUrl]" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Add Album</button>
-    </form>
-    <a href="/albums" class="btn btn-secondary mt-3">Back to Albums</a>
+    <h1 class="text-center mb-4">Add New Album</h1>
+    <div class="form-container">
+      <form action="/albums" method="post">
+        <div class="mb-3">
+          <label for="albumName" class="form-label">Album Name:</label>
+          <input type="text" id="albumName" name="album[albumName]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="artist" class="form-label">Artist:</label>
+          <input type="text" id="artist" name="album[artist]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="genre" class="form-label">Genre:</label>
+          <input type="text" id="genre" name="album[genre]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Year:</label>
+          <input type="number" id="year" name="album[year]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="albumImageUrl" class="form-label">Album Image URL:</label>
+          <input type="url" id="albumImageUrl" name="album[albumImageUrl]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="artistImageUrl" class="form-label">Artist Image URL:</label>
+          <input type="url" id="artistImageUrl" name="album[artistImageUrl]" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-custom">Add Album</button>
+      </form>
+      <a href="/albums" class="btn btn-secondary mt-3">Back to Albums</a>
+    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
