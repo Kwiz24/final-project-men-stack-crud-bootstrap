@@ -14,7 +14,7 @@ dotenv.config();
 require('./config/passport')(passport);
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3004;
 
 // Express session
 app.use(session({
@@ -210,6 +210,6 @@ app.post('/users/login', passport.authenticate('local', {
 }));
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(3004, () => {
+  console.log(`Server is running on http://localhost:${3004}`);
 });
